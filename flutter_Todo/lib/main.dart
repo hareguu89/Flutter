@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.blue),
       title: 'Pracatice App',
-      home: TodoList(),
+      home: const TodoList(),
     );
   }
 }
@@ -39,6 +39,7 @@ class _TodoListState extends State<TodoList> {
     super.dispose();
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -51,20 +52,23 @@ class _TodoListState extends State<TodoList> {
             Row(
               children: <Widget>[
                 Expanded(
-                    child: TextField(
-                  controller: _todoController,
-                )),
+                  child: TextField(
+                    controller: _todoController,
+                  ),
+                ),
                 ElevatedButton(
-                    onPressed: () {
-                      _addTodo(Todo(_todoController.text));
-                    },
-                    child: const Text('추가'))
+                  onPressed: () {
+                    _addTodo(Todo(_todoController.text));
+                  },
+                  child: const Text('추가'),
+                )
               ],
             ),
             Expanded(
-                child: ListView(
-              children: _items.map((data) => _buildItemWidget(data)).toList(),
-            ))
+              child: ListView(
+                children: _items.map((data) => _buildItemWidget(data)).toList(),
+              ),
+            )
           ],
         ),
       ),

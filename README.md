@@ -77,3 +77,16 @@ didChangeDependencies 메서드는 위젯이 최초 생성될 때 initState() �
 ### <span style="color: #A7C7E7">setState()</span>
 
 ### <span style="color: #A7C7E7"> dispose()</span>
+
+
+## Const vs Final
+
+const와 final의 속성은 비슷하지만
+- const는 compile 단계에서 지정, final은 running context에서 지정
+
+>``` dart
+> final List<String> classOne = ['철수','영이','수미']; // classOne 의 철수 영이 수미 라는 값은 바뀔수있다.
+> const List<String> classOne = ['철수','영이','수미']; // classTwo 의 element는 바뀔수 없다.
+
+## Number type
+
