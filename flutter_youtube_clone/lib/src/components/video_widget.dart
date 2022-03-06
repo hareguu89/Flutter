@@ -46,7 +46,7 @@ class VideoWidget extends StatelessWidget {
                   children: [
                     const Expanded(
                         child: Text(
-                      '유튜브 다시 보기',
+                      '유튜브 다시 보기 유튜브 다시 보기 유튜브 다시 보기 유튜브 다시 보기 유튜브 다시 보기 유튜브 다시 보기 유튜브 다시 보기',
                       maxLines: 2,
                     )),
                     IconButton(
@@ -65,7 +65,7 @@ class VideoWidget extends StatelessWidget {
                         color: Colors.black.withOpacity(0.8),
                       ),
                     ),
-                    Text(' '),
+                    Text(' · '),
                     Text(
                       '조회수 1000',
                       style: TextStyle(
